@@ -13,10 +13,6 @@
   -webkit-user-drag: none;
 }
 
-.hide {
-  opacity: 0;
-}
-
 nav#navbar {
   display: block;
   position: absolute;
@@ -186,7 +182,7 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container > a > .nav-ar-button
   text-align: center;
 }
 #main .section-container-headline {
-  font-size: 7vw;
+  font-size: 250%;
 }
 @keyframes slide-left-fade {
   from {
@@ -240,14 +236,15 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container > a > .nav-ar-button
   margin-top: 50px;
 }
 #main .second-section-container .info-container .info-text-container .info-text {
-  text-align: left;
   flex: 2;
+  margin: auto;
+  text-align: left;
 }
 #main .second-section-container .info-container .info-text-container .info-text h1 {
-  font-size: 5vw;
+  font-size: 150%;
 }
 #main .second-section-container .info-container .info-text-container .info-text p {
-  font-size: 3vw;
+  font-size: 130%;
 }
 #main .second-section-container .info-container .info-text-container .info-img {
   flex: 1;
@@ -256,23 +253,27 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container > a > .nav-ar-button
   width: 13vw;
   height: auto;
 }
+#main .content-container {
+  margin: 0 20px;
+}
 #main .content-container .content {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  text-align: left;
 }
 #main .content-container .content a {
   flex: 1;
   margin: auto;
 }
 #main .content-container .content a .content-img {
-  width: 40vw;
+  width: 70%;
   height: auto;
 }
 #main .content-container .content .content-text {
   flex: 1;
-  text-align: left;
-  font-size: 3vw;
+  margin: auto;
+  font-size: 80%;
 }
 
 body#ar {
