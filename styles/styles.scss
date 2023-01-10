@@ -1,8 +1,16 @@
+$navbar-height: 65px;
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+
+html, body {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -16,15 +24,34 @@
 }
 
 
+@keyframes slide-left-fade {
+    from {
+        transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        -o-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 // NAVBAR
 nav#navbar {
-    display: block;
     position: absolute;
     top: 50vh;
     left: 0;
-    background: transparent;
+    display: block;
     width: 100%;
-    height: 65px;
+    height: $navbar-height;
     z-index: 99;
 
     transition: background 0.8s;
@@ -36,6 +63,7 @@ nav#navbar {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
         height: 100%;
 
         .nav-title-container {
@@ -49,18 +77,18 @@ nav#navbar {
             font-weight: lighter;
             color: white;
 
-            transition: color 0.8s, transform 1s;
-            -o-transition: color 0.8s, transform 1s;
-            -moz-transition: color 0.8s, transform 1s;
-            -webkit-transition: color 0.8s, transform 1s;
+            transition: color 0.4s, transform 0.5s;
+            -o-transition: color 0.4s, transform 0.5s;
+            -moz-transition: color 0.4s, transform 0.5s;
+            -webkit-transition: color 0.4s, transform 0.5s;
 
             .title {
                 display: block;
                 font-size: 5vw;
-                transition: font-size 1s;
-                -o-transition: font-size 1s;
-                -moz-transition: font-size 1s;
-                -webkit-transition: font-size 1s;
+                transition: font-size 0.5s;
+                -o-transition: font-size 0.5s;
+                -moz-transition: font-size 0.5s;
+                -webkit-transition: font-size 0.5s;
             }
 
             .subtitle {
@@ -71,18 +99,18 @@ nav#navbar {
                 -ms-transform: translateX(15%);
                 -moz-transform: translateX(15%);
                 -webkit-transform: translateX(15%);
-                transition: transform 1s, font-size 1s;
-                -o-transition: transform 1s, font-size 1s;
-                -moz-transition: transform 1s,  font-size 1s;
-                -webkit-transition: transform 1s, font-size 1s;
+                transition: transform 0.5s, font-size 0.5s;
+                -o-transition: transform 0.5s, font-size 0.5s;
+                -moz-transition: transform 0.5s,  font-size 0.5s;
+                -webkit-transition: transform 0.5s, font-size 0.5s;
             }
 
             span {
                 opacity: 0;
-                transition: opacity 1.5s;
-                -o-transition: opacity 1.5s;
-                -moz-transition: opacity 1.5s;
-                -webkit-transition: opacity 1.5s;
+                transition: opacity 1.3s;
+                -o-transition: opacity 1.3s;
+                -moz-transition: opacity 1.3s;
+                -webkit-transition: opacity 1.3s;
             }
         }
 
@@ -91,24 +119,25 @@ nav#navbar {
             text-align: center;
             overflow: hidden;
 
-            .nav-ar-button {
-                display: inline-block;
-                width: 30px;
-                height: auto;
-                transform: translateX(100vw);
-                -o-transform: translateX(100vw);
-                -ms-transform: translateX(100vw);
-                -moz-transform: translateX(100vw);
-                -webkit-transform: translateX(100vw);
-                transition: width 0.2s, transform 3.5s;
-                -o-transition: width 0.2s, transform 3.5s;
-                -moz-transition: width 0.2s, transform 3.5s;
-                -webkit-transition: width 0.2s, transform 3.5s;
+            a {
+                opacity: 0;
+                pointer-events: none;
+                text-decoration: none;
+                cursor: default;
 
-                cursor: pointer;
+                .nav-ar-button {
+                    display: inline-block;
+                    width: 30px;
+                    height: auto;
 
-                &:hover {
-                    width: 35px;
+                    transition: width 0.2s;
+                    -o-transition: width 0.2;
+                    -moz-transition: width 0.2s;
+                    -webkit-transition: width 0.2s;
+    
+                    &:hover {
+                        width: 35px;
+                    }
                 }
             }
         }
@@ -117,7 +146,6 @@ nav#navbar {
     &.scrolled {
         position: fixed;
         top: 0;
-        left: 0;
         background: white;
 
         .nav-container {
@@ -151,16 +179,18 @@ nav#navbar {
                 }
             }
 
-            .nav-ar-button-container > a > .nav-ar-button {
-                transition: width 0.2s, transform 1s;
-                -o-transition: width 0.2, transform 1s;
-                -moz-transition: width 0.2s, transform 1s;
-                -webkit-transition: width 0.2s, transform 1s;
-                transform: translateX(0);
-                -o-transform: translateX(0);
-                -ms-transform: translateX(0);
-                -moz-transform: translateX(0);
-                -webkit-transform: translateX(0);
+            .nav-ar-button-container {
+                a  {
+                    pointer-events: initial;
+                    cursor: pointer;
+                    opacity: 1;
+                    .nav-ar-button {
+                        animation: slide-left-fade 10s ease;
+                        -webkit-animation: slide-left-fade 1s ease;
+                        -o-animation: slide-left-fade 1s ease;
+                        -moz-animation: slide-left-fade 1s ease;
+                    }
+                }
             }
         }
     }
@@ -171,39 +201,26 @@ nav#navbar {
 #main {
     display: block;
     position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: black;
     z-index: 0;
+    margin: 0;
+    padding: 0;
+
+    background: black;
 
     .section-container {
+        margin: 0;
+        padding: 100px 0;
         background: black;
         color: white;
-        padding-top: 200px;
         text-align: center;
     }
 
     .section-container-headline {
         font-size: 250%;
-    }
-
-    @keyframes slide-left-fade {
-        from {
-            transform: translateX(100vw);
-            -o-transform: translateX(100vw);
-            -ms-transform: translateX(100vw);
-            -moz-transform: translateX(100vw);
-            -webkit-transform: translateX(100vw);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            -o-transform: translateX(0);
-            -ms-transform: translateX(0);
-            -moz-transform: translateX(0);
-            -webkit-transform: translateX(0);
-            opacity: 1;
-        }
     }
 
     .once-animated {
@@ -219,10 +236,11 @@ nav#navbar {
 
     .first-section-container {
         display: block;
-        height: 100vh;
         position: relative;
+        height: 100vh;
         overflow: hidden;
-        box-shadow: inset 0 -100px 100px -10px black;
+        box-shadow: inset 0 -100px 100px -10px black,
+                    0 20px 0px 10px black;
         
         @keyframes spin {
             from {
@@ -253,18 +271,18 @@ nav#navbar {
         }
 
         &::before {
-            content: "";
+            content: '';
             display: block;
             position: relative;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
+            top: -110%;
+            left: -110%;
+            width: 320%;
+            height: 320%;
             filter: brightness(0.4);
             -webkit-filter: brightness(0.4);
             background: url("../img/space.jpg");
             background-position: center;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             animation: spin 360s linear infinite, blur-in 4s;
             -webkit-animation: spin 360s linear infinite, blur-in 4s;
@@ -276,12 +294,15 @@ nav#navbar {
 
     .second-section-container {
         .info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
             margin: 0 60px;
-
+            
             .info-text-container {
+                flex: 1;
                 display: flex;
                 flex-direction: row;
-                margin-top: 50px;
 
                 .info-text {
                     flex: 2;
@@ -297,6 +318,7 @@ nav#navbar {
 
                 .info-img {
                     flex: 1;
+                    margin: auto;
                     img {
                         width: 13vw;
                         height: auto,
@@ -329,6 +351,50 @@ nav#navbar {
                 flex: 1;
                 margin: auto;
                 font-size: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    #main {
+        .section-container-headline {
+            font-size: 9vw;
+        }
+
+        .second-section-container > .info-container > .info-text-container {
+            flex-direction: column;
+            gap: 5px;
+            
+            .info-text {
+                order: 2;
+                text-align: center;
+
+                h1 {
+                    font-size: 7.5vw;
+                }
+
+                p {
+                    font-size: 5.5vw;
+                }
+            }
+
+            .info-img {
+                order: 1;
+                width: 80px;
+                height: auto;
+            }
+        }
+
+        .content-container {
+            .content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+
+                .content-text {
+                    text-align: left;
+                }
             }
         }
     }

@@ -35,13 +35,14 @@ title.parentElement.addEventListener('click', () => {
 });
 
 
+const defaultNavbarPos = navbar.getBoundingClientRect().top + window.scrollY;
+
+
 addEventListener('scroll', async (e) => {
     const halfWindowHeight = window.innerHeight / 2;
 
-    if (window.scrollY > halfWindowHeight) {
-        if (!navbar.classList.contains('scrolled')) {
-            navbar.classList.add('scrolled');
-        }
+    if (window.scrollY > defaultNavbarPos) {
+        navbar.classList.add('scrolled');
     }
     else {
         navbar.classList.remove('scrolled');
@@ -49,7 +50,7 @@ addEventListener('scroll', async (e) => {
 
     for (const element of onceAnimationElements) {
         const elementRect = element.getBoundingClientRect();
-        if (elementRect.top < halfWindowHeight + navbar.offsetHeight + 200) {
+        if (elementRect.top < halfWindowHeight + navbar.offsetHeight + 100) {
             element.classList.remove('once-animation');
             element.classList.add('once-animated');
         }
