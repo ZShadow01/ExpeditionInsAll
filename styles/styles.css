@@ -170,10 +170,10 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container > a > .nav-ar-button
   }
   to {
     transform: translateX(0);
-    -o-transform: translateX(100vw);
-    -ms-transform: translateX(100vw);
-    -moz-transform: translateX(100vw);
-    -webkit-transform: translateX(100vw);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
     opacity: 1;
   }
 }
