@@ -35,6 +35,7 @@ nav#navbar .nav-container {
 }
 nav#navbar .nav-container .nav-title-container {
   flex: 3;
+  margin-left: 10px;
   transform: translateX(10vw);
   -o-transform: translateX(10vw);
   -ms-transform: translateX(10vw);
@@ -187,10 +188,18 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container > a > .nav-ar-button
 @keyframes slide-left-fade {
   from {
     transform: translateX(100vw);
+    -o-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+    -moz-transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     opacity: 0;
   }
   to {
     transform: translateX(0);
+    -o-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+    -moz-transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     opacity: 1;
   }
 }
@@ -199,6 +208,9 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container > a > .nav-ar-button
 }
 #main .once-animated {
   animation: slide-left-fade 0.6s ease;
+  -webkit-animation: slide-left-fade 0.6s ease;
+  -o-animation: slide-left-fade 0.6s ease;
+  -moz-animation: slide-left-fade 0.6s ease;
 }
 #main .first-section-container {
   display: block;
