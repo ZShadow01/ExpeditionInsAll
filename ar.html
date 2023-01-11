@@ -23,11 +23,12 @@
                 vr-mode-ui="enabled: false;">
             <a-assets>
                 <a-asset-item id="perseverance" src="assets/models/NASAPerseverance/scene.gltf"></a-asset-item>
+                <a-asset-item id="busterDrone" src="assets/models/BusterDrone/scene.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
-                    url="assets/patterns/PATT/pattern-CuriosityRoverPattern.patt">
-                <a-entity position="0 0 0" class="clickable" gltf-model="#perseverance"></a-entity>
+                    url="assets/patterns/PATT/pattern-4x4_1000-0.patt">
+                <a-entity position="0 0 0" class="clickable" gltf-model="#busterDrone"></a-entity>
             </a-marker>
         </a-scene>
     </body>
