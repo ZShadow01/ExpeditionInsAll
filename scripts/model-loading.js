@@ -1,9 +1,10 @@
 AFRAME.registerComponent('model-loading', {
     init: function() {
-        this.el.parentElement.addEventListener('markerFound', (e) => {
-            this.el.classList.add('loading');
-            this.el.addEventListener('model-loaded', (e) => {
-                this.el.classList.remove('loading');
+        let element = this.el;
+        console.log(element);
+        element.parentElement.addEventListener('markerFound', (e) => {
+            element.addEventListener('model-loaded', (e) => {
+                element.classList.remove('loading');
             });
         });
     }
