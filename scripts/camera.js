@@ -51,6 +51,10 @@ AFRAME.registerComponent('camera-init', {
                 select.removeChild(select.firstChild);
             }
         });
+
+        devices.sort((a, b) => {
+            a.deviceId < b.deviceId;
+        });
     
         for (let i = 0; i < devices.length; i++) {
             let deviceInfo = devices[i];
