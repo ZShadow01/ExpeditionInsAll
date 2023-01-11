@@ -337,7 +337,7 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container a .nav-ar-button {
   }
 }
 body#ar {
-  overflow: hidden;
+  margin: 0;
 }
 
 a#torch {
