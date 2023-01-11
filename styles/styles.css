@@ -277,6 +277,21 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container a .nav-ar-button {
   width: 13vw;
   height: auto;
 }
+#main .click-me {
+  position: relative;
+}
+#main .click-me::after {
+  content: "Klick mich";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
 #main .content-container {
   margin: 0 20px;
 }
@@ -286,15 +301,15 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container a .nav-ar-button {
   margin-top: 50px;
   text-align: left;
 }
-#main .content-container .content a {
+#main .content-container .content .content-image-container {
   flex: 1;
   margin: auto;
 }
-#main .content-container .content a .content-img {
+#main .content-container .content .content-image-container a .content-img {
   width: 70%;
   height: auto;
 }
-#main .content-container .content a .content-img:hover {
+#main .content-container .content .content-image-container a:hover .content-img {
   filter: brightness(0.8);
   -webkit-filter: brightness(0.8);
 }

@@ -328,6 +328,22 @@ nav#navbar {
         }
     }
 
+    .click-me {
+        position: relative;
+        &::after {
+            content: 'Klick mich';
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: white;
+            color: black;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 5px 15px;
+        }
+    }
+
     .content-container {
         margin: 0 20px;
 
@@ -336,18 +352,22 @@ nav#navbar {
             justify-content: center;
             margin-top: 50px;
             text-align: left;
-    
-            a {
+
+            .content-image-container {
                 flex: 1;
                 margin: auto;
-
-                .content-img {
-                    width: 70%;
-                    height: auto;
-
+                
+                a {
+                    .content-img {
+                        width: 70%;
+                        height: auto;
+                    }
+    
                     &:hover {
-                        filter: brightness(0.8);
-                        -webkit-filter: brightness(0.8);
+                        .content-img {
+                            filter: brightness(0.8);
+                            -webkit-filter: brightness(0.8);
+                        }
                     }
                 }
             }
