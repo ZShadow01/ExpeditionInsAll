@@ -445,6 +445,14 @@ body#ar {
 }
 
 
+.select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+
 a#torch {
     position: absolute;
     bottom: 5px;
