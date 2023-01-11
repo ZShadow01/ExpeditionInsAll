@@ -344,6 +344,11 @@ nav#navbar {
                 .content-img {
                     width: 70%;
                     height: auto;
+
+                    &:hover {
+                        filter: brightness(0.8);
+                        -webkit-filter: brightness(0.8);
+                    }
                 }
             }
     
