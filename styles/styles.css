@@ -338,6 +338,7 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container a .nav-ar-button {
 }
 body#ar {
   margin: 0;
+  overflow: hidden;
 }
 
 a#torch {
@@ -349,6 +350,16 @@ a#torch {
 a#torch img {
   width: 35px;
   height: auto;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

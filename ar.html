@@ -15,6 +15,7 @@
 
         <script src="scripts/torch.js" type="text/javascript"></script>
         <script src="scripts/camera.js" type="text/javascript"></script>
+        <script src="scripts/model-loading.js" type="text/javascript"></script>
     </head>
     <body id="ar">
         <a id="torch"><img src="img/flashlight.png" alt="torchImage"></a>
@@ -23,6 +24,7 @@
                 arjs="sourceType: webcam; trackingMethod: best; patternRatio: 0.90;"
                 vr-mode-ui="enabled: false;">
             <a-assets>
+                <a-asset-item id="curiosity" src="assets/models/NASACuriosity/scene.gltf"></a-asset-item>
                 <a-asset-item id="perseverance" src="assets/models/NASAPerseverance/scene.gltf"></a-asset-item>
                 <a-asset-item id="busterDrone" src="assets/models/BusterDrone/scene.gltf"></a-asset-item>
             </a-assets>
@@ -34,7 +36,7 @@
 
             <a-marker preset="custom" emitevents="true" raycaster="object: .clickable" type="pattern"
                     url="assets/patterns/PATT/pattern-4x4_1000-1.patt">
-                <a-entity position="0 0 0" class="clickable" gltf-model="#perseverance"></a-entity>
+                <a-entity position="0 0 0" class="clickable loading" gltf-model="#perseverance"></a-entity>
             </a-marker>
 
             <a-entity camera camera-init></a-entity>
