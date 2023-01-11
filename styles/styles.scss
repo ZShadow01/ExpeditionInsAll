@@ -433,6 +433,18 @@ body#ar {
     overflow: hidden;
 }
 
+
+#rick {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    .hide {
+        display: none;
+    }
+}
+
+
 a#torch {
     position: absolute;
     bottom: 5px;

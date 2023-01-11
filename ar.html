@@ -16,8 +16,13 @@
         <script src="scripts/torch.js" type="text/javascript"></script>
         <script src="scripts/camera.js" type="text/javascript"></script>
         <script src="scripts/animation-load.js" type="text/javascript"></script>
+        <script src="scripts/easter-egg.js" type="text/javascript"></script>
     </head>
     <body id="ar">
+        <div class="select">
+            <label for="videoSource">Wähle eine Kamera: </label>
+            <select id="videoSource"></select>
+        </div>
         <a id="torch"><img src="img/flashlight.png" alt="torchImage"></a>
         <a-scene embedded torch="target: #torch"
                 renderer="logarithmicDepthBuffer: true;"
@@ -27,7 +32,6 @@
                 <a-asset-item id="curiosity" src="assets/models/NASACuriosity/scene.gltf"></a-asset-item>
                 <a-asset-item id="perseverance" src="assets/models/NASAPerseverance/scene.gltf"></a-asset-item>
                 <a-asset-item id="busterDrone" src="assets/models/BusterDrone/scene.gltf"></a-asset-item>
-                <a-asset-item id="curiosity" src="assets/models/NASACuriosity/scene.gltf"></a-asset-item>
                 <a-asset-item id="spiritAndOpportunity" src="assets/models/SpiritAndOpportunity.glb"></a-asset-item>
             </a-assets>
 
@@ -42,7 +46,8 @@
             </a-marker>
 
             <a-marker preset="custom" emitevents="true" raycaster="object: .clickable" type="pattern"
-                    url="assets/patterns/PATT/pattern-CuriosityRoverPattern.patt">
+                    url="assets/patterns/PATT/pattern-CuriosityRoverPattern.patt" easter-egg="targetImage: #rick">
+                <img id="rick" class="hide" src="img/rick.gif" alt="rick">
                 <a-entity position="0 0 0" class="clickable" gltf-model="#spiritAndOpportunity" animation-load></a-entity>
             </a-marker>
 
