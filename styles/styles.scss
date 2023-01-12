@@ -1,4 +1,6 @@
 $navbar-height: 65px;
+$page-title-font-size: 5vw;
+$page-subtitle-font-size: 4vw;
 
 
 * {
@@ -84,7 +86,7 @@ nav#navbar {
 
             .title {
                 display: block;
-                font-size: 5vw;
+                font-size: $page-title-font-size;
                 transition: font-size 0.5s;
                 -o-transition: font-size 0.5s;
                 -moz-transition: font-size 0.5s;
@@ -93,7 +95,7 @@ nav#navbar {
 
             .subtitle {
                 display: block;
-                font-size: 4vw;
+                font-size: $page-subtitle-font-size;
                 transform: translateX(15%);
                 -o-transform: translateX(15%);
                 -ms-transform: translateX(15%);
@@ -422,45 +424,5 @@ nav#navbar {
                 }
             }
         }
-    }
-}
-
-
-
-// AR
-body#ar {
-    margin: 0;
-    overflow: hidden;
-}
-
-
-#rick {
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    .hide {
-        display: none;
-    }
-}
-
-
-.select {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-
-a#torch {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    z-index: 99;
-    
-    img {
-        width: 35px;
-        height: auto;
     }
 }

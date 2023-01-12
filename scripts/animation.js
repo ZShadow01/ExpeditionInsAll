@@ -37,7 +37,6 @@ title.parentElement.addEventListener('click', () => {
 
 const defaultNavbarPos = navbar.getBoundingClientRect().top + window.scrollY;
 
-
 addEventListener('scroll', async (e) => {
     const halfWindowHeight = window.innerHeight / 2;
 

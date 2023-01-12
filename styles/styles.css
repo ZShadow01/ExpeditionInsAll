@@ -351,36 +351,5 @@ nav#navbar.scrolled .nav-container .nav-ar-button-container a .nav-ar-button {
     text-align: left;
   }
 }
-body#ar {
-  margin: 0;
-  overflow: hidden;
-}
-
-#rick {
-  position: absolute;
-  top: 0;
-  left: 50%;
-}
-#rick .hide {
-  display: none;
-}
-
-.select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-
-a#torch {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  z-index: 99;
-}
-a#torch img {
-  width: 35px;
-  height: auto;
-}
 
 /*# sourceMappingURL=styles.css.map */

@@ -15,7 +15,6 @@ AFRAME.registerComponent('camera-init', {
         this.videoSelect.addEventListener('change', this.switchCamera);
 
         this.initialize();
-        this.switchCamera();
     },
     initialize: function() {
         navigator.mediaDevices.enumerateDevices()

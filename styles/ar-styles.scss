@@ -1,0 +1,60 @@
+$navbar-height: 65px;
+$page-title-font-size: 5vw;
+$page-subtitle-font-size: 4vw;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body#ar {
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.tutorial-overlay {
+    position: absolute;
+    top: 50vh;
+    left: 25vw;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: rgb(0, 0, 0, 0.7);
+    width: 50vw;
+
+    opacity: 0;
+    transition: opacity 5s 3s;
+}
+
+
+.select-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 99;
+
+    .select {
+        float: center;
+        text-align: center;
+        color: white;
+    }
+}
+
+
+a#torch {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 99;
+    
+    img {
+        width: 35px;
+        height: auto;
+    }
+}
