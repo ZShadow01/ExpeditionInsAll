@@ -54,6 +54,7 @@
                 <a-asset-item id="falconHeavy" src="assets/models/FalconHeavy/scene.gltf"></a-asset-item>
                 <a-asset-item id="bfr" src="assets/models/BFR/scene.gltf"></a-asset-item>
                 <a-asset-item id="asteroidMiningFacility" src="assets/models/AsteroidMiningFacility/scene.gltf"></a-asset-item>
+                <a-asset-item id="exoplanet" src="assets/models/Exoplanet/scene.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
@@ -112,7 +113,10 @@
                 <a-entity position="0 0 0" class="clickable" gltf-model="#asteroidMiningFacility" scale="0.02 0.02 0.02" gesture-handler></a-entity>    
             </a-marker>
 
-
+            <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
+                    url="assets/patterns/PATT/pattern-4x4_1000-11.patt">
+                <a-entity position="0 0 0" class="clickable" gltf-model="#exoplanet" gesture-handler></a-entity>    
+            </a-marker>
 
             <a-entity camera camera-init></a-entity>
         </a-scene>
