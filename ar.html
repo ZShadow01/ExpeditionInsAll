@@ -52,6 +52,7 @@
                 <a-asset-item id="spiritAndOpportunity" src="assets/models/SpiritAndOpportunity/scene.gltf"></a-asset-item>
                 <a-asset-item id="falcon9Dragon2" src="assets/models/SpaceX_Falcon9_Dragon2/scene.gltf"></a-asset-item>
                 <a-asset-item id="falconHeavy" src="assets/models/FalconHeavy/scene.gltf"></a-asset-item>
+                <a-asset-item id="bfr" src="assets/models/BFR/scene.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
@@ -97,6 +98,11 @@
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
                     url="assets/patterns/PATT/pattern-4x4_1000-8.patt">
+                <a-entity position="0 0 0" class="clickable" gltf-model="#bfr" gesture-handler></a-entity>    
+            </a-marker>
+
+            <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
+                    url="assets/patterns/PATT/pattern-4x4_1000-9.patt">
                 <a-entity position="0 0 0" class="clickable" gltf-model="#amongUsCharacter" scale="0.04 0.04 0.04" gesture-handler animation-load></a-entity>    
             </a-marker>
 
