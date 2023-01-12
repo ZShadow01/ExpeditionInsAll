@@ -43,6 +43,7 @@
                 arjs="sourceType: webcam; trackingMethod: best; patternRatio: 0.90;"
                 vr-mode-ui="enabled: false;" gesture-detector>
             <a-assets>
+                <a-asset-item id="space" src="assets/models/Space/scene.gltf"></a-asset-item>
                 <a-asset-item id="marsTerrain" src="assets/models/MarsTerrain/scene.gltf"></a-asset-item>
                 <a-asset-item id="curiosity" src="assets/models/NASACuriosity/scene.gltf"></a-asset-item>
                 <a-asset-item id="perseverance" src="assets/models/NASAPerseverance/scene.gltf"></a-asset-item>
@@ -56,7 +57,7 @@
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
                     url="assets/patterns/PATT/pattern-4x4_1000-1.patt">
-                <a-entity position="0 0 0" light="type: spot; intensity: 2;" class="clickable" gltf-model="#spiritAndOpportunity" gesture-handler></a-entity>
+                <a-entity position="0 0 0" light="type: ambient; color: #CCC;" class="clickable" gltf-model="#spiritAndOpportunity" gesture-handler></a-entity>
             </a-marker>
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
@@ -73,6 +74,11 @@
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
                     url="assets/patterns/PATT/pattern-4x4_1000-4.patt">
                 <a-entity position="0 0 0" class="clickable" gltf-model="#marsTerrain" gesture-handler></a-entity>
+            </a-marker>
+
+            <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
+                    url="assets/patterns/PATT/pattern-4x4_1000-5.patt">
+                <a-entity position="0 0 0" class="clickable" gltf-model="#space" gesture-handler></a-entity>
             </a-marker>
 
             <a-entity camera camera-init></a-entity>
