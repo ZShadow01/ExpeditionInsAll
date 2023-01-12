@@ -1,0 +1,11 @@
+Model Information:
+* title:	Opportunity
+* source:	https://sketchfab.com/3d-models/opportunity-0eef63b33e774be6b2ddec9e2e86e2f8
+* author:	Wacky (https://sketchfab.com/wackyblocks)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Opportunity" (https://sketchfab.com/3d-models/opportunity-0eef63b33e774be6b2ddec9e2e86e2f8) by Wacky (https://sketchfab.com/wackyblocks) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
