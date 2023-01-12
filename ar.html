@@ -56,6 +56,7 @@
                 <a-asset-item id="asteroidMiningFacility" src="assets/models/AsteroidMiningFacility/scene.gltf"></a-asset-item>
                 <a-asset-item id="exoplanet" src="assets/models/Exoplanet/scene.gltf"></a-asset-item>
                 <a-asset-item id="venus" src="assets/models/Venus/scene.gltf"></a-asset-item>
+                <a-asset-item id="marsBase" src="assets/models/MarsBase/scene.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
@@ -122,6 +123,11 @@
             <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
                     url="assets/patterns/PATT/pattern-4x4_1000-12.patt">
                 <a-entity position="0 0 0" class="clickable" gltf-model="#venus" gesture-handler></a-entity>    
+            </a-marker>
+
+            <a-marker preset="custom" emitevents="true" raycaster="objects: .clickable" type="pattern"
+                    url="assets/patterns/PATT/pattern-4x4_1000-13.patt">
+                <a-entity position="0 0 0" class="clickable" gltf-model="#marsBase" gesture-handler animation-load></a-entity>    
             </a-marker>
 
             <a-entity camera camera-init></a-entity>
