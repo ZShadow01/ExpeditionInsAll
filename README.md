@@ -13,4 +13,5 @@ Link: https://expedition-ins-all.vercel.app/
 
 ## Demo
 Roter Mann mit Muskeln
+
 ![Mann mit Muskeln](assets/bigamogus3d.png)
